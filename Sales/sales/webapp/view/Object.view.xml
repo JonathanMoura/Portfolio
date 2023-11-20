@@ -43,7 +43,7 @@
                 <OverflowToolbar>
                     <content>
                         <Title
-                            text="Itens da Venda"
+                            text="Sale items"
                             level="H2"
                         />
                     </content>
@@ -67,7 +67,7 @@
                     demandPopin="true"
                     hAlign="End"
                 >
-                    <Text text="Quantidade" />
+                    <Text text="Quantity" />
                 </Column>
 
                 <Column
@@ -75,11 +75,11 @@
                     demandPopin="true"
                     hAlign="Center"
                 >
-                    <Text text="Unidade de venda" />
+                    <Text text="Sales unit" />
                 </Column>
                 
                 <Column hAlign="End">
-                    <Text text="Valor líquido" />
+                    <Text text="Net value" />
                 </Column>
             </columns>
             <items>

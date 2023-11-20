@@ -11,7 +11,7 @@
 
         <semantic:titleHeading>
             <Title
-                text="{i18n>worklistTitle}"
+                text="Sales"
                 level="H2"/>
         </semantic:titleHeading>
 
@@ -54,15 +54,15 @@
 
                 <columns>
                     <Column>
-                        <Text text="Código"/>
+                        <Text text="Code"/>
                     </Column>
 
                     <Column >
-                        <Text text="Descrição"/>
+                        <Text text="Description"/>
                     </Column>
 
                     <Column >
-                        <Text text="Valor líquido" />
+                        <Text text="Net value" />
                     </Column>
                 </columns>
 
