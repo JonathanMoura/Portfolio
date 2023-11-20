@@ -1,0 +1,105 @@
+<mvc:View
+    controllerName="salesreport.sales.controller.Object"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic"
+>
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false"
+        busy="{objectView>/busy}"
+        busyIndicatorDelay="{objectView>/delay}"
+    >
+        <semantic:titleHeading>
+            <Title
+                text="{IdVenda}"
+                level="H2"
+            />
+        </semantic:titleHeading>
+
+        <semantic:headerContent>
+            <ObjectNumber />
+        </semantic:headerContent>
+
+        <semantic:sendEmailAction>
+            <semantic:SendEmailAction
+                id="shareEmail"
+                press=".onShareEmailPress"
+            />
+        </semantic:sendEmailAction>
+
+        <Table
+            id="ItemVendaTable"
+            inset="false"
+            items="{
+			path: 'itens',
+			sorter: {
+				path: 'ID'
+			}
+		}"
+        >
+            <headerToolbar>
+                <OverflowToolbar>
+                    <content>
+                        <Title
+                            text="Itens da Venda"
+                            level="H2"
+                        />
+                    </content>
+                </OverflowToolbar>
+            </headerToolbar>
+
+            <columns>
+                <Column width="12em">
+                    <Text text="Item" />
+                </Column>
+
+                <Column
+                    minScreenWidth="Tablet"
+                    demandPopin="true"
+                >
+                    <Text text="Material" />
+                </Column>
+
+                <Column
+                    minScreenWidth="Desktop"
+                    demandPopin="true"
+                    hAlign="End"
+                >
+                    <Text text="Quantidade" />
+                </Column>
+
+                <Column
+                    minScreenWidth="Desktop"
+                    demandPopin="true"
+                    hAlign="Center"
+                >
+                    <Text text="Unidade de venda" />
+                </Column>
+                
+                <Column hAlign="End">
+                    <Text text="Valor líquido" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem vAlign="Middle">
+                    <cells>
+                        <ObjectIdentifier title="{Item}" />
+                        <ObjectIdentifier title="{Material}" />
+                        <ObjectIdentifier title="{Quantidade}" />
+                        <ObjectIdentifier title="{Um}" />
+                        <ObjectNumber
+                            number="{
+								parts:[{path:'ValorLiquido'},{path:'CurrencyCode'}],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {showMeasure: false}
+							}"
+                            unit="{CurrencyCode}"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </semantic:SemanticPage>
+</mvc:View>
