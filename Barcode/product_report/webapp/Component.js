@@ -2,8 +2,9 @@ sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/Device",
     "./model/models",
-    "./controller/ErrorHandler"
-], function (UIComponent, Device, models, ErrorHandler) {
+    "./controller/ErrorHandler",
+    "productreport/controller/CameraDialog"
+], function (UIComponent, Device, models, ErrorHandler, CameraDialog) {
     "use strict";
 
     return UIComponent.extend("productreport.Component", {
@@ -30,6 +31,13 @@ sap.ui.define([
 
             // create the views based on the url/hash
             this.getRouter().initialize();
+
+            //CameraDialog instance
+            this._cameraDialog = new CameraDialog(this.getRootControl());
+        },
+
+        getCameraDialog: function (){
+            return this._cameraDialog;
         },
 
         /**

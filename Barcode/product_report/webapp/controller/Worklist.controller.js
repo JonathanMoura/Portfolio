@@ -97,6 +97,25 @@ sap.ui.define([
             )
         },
 
+        onProductScan2: function () {
+            let oCamera = this.getOwnerComponent().getCameraDialog();
+            var sCameraResult = oCamera.open();
+
+            sCameraResult.then(
+                function (text) {
+                    var aTableSearchState = [];
+                    var sQuery = text;
+
+                    if(sQuery && sQuery.length > 0) {
+                        MessageToast.show(sQuery);
+
+                        aTableSearchState = [new Filter("Product", FilterOperator.EQ, sQuery)];
+                    }
+                    this._applySearch(aTableSearchState);
+                }.bind(this)
+            )
+        },
+
         onUpdateFinished : function (oEvent) {
             // update the worklist's object counter after the table update
             var sTitle,

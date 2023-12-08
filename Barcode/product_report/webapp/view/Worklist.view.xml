@@ -41,6 +41,7 @@
                         <ToolbarSpacer />
 
                         <Button text="Scanner NDC" icon="sap-icon://bar-code" press="onProductScan" visible="true" />
+                        <Button text="Scanner Quagga" icon="sap-icon://bar-code" press="onProductScan2" visible="{device>/barcodeScanEnabled}" />
                         
                         <SearchField
                             id="searchField"

@@ -77,7 +77,9 @@
     },
     "resources": {
       "js":[{"uri": "libs/quagga.min.js"}],
-      "css": []
+      "css": [{
+        "uri": "css/style.css"
+      }]
     },
     "routing": {
       "config": {

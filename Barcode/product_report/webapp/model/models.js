@@ -17,7 +17,20 @@ sap.ui.define([
             createDeviceModel: function () {
                 var oModel = new JSONModel(Device);
                 oModel.setDefaultBindingMode("OneWay");
-                return oModel;
+                
+            //Lógica quagga
+            //Disable the scan barcode button by default
+            oModel.setProperty("/barcodeScanEnabled", false);
+
+            if(navigator && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true}).then(function (stream) {
+                    //device supports video, which means will enable the scan button
+                    oModel.setProperty("/barcodeScanEnabled", true);
+                }).catch(function (err) {
+                    // not supported, barcodeScanEnabled already default to false
+                });
+            }
+            return oModel;
         }
     };
 });
