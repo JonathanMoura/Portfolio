@@ -1,0 +1,28 @@
+<mvc:View
+    controllerName="ghost.controller.GhostView1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content />
+
+        <html:div id="ghost">
+            <html:div class="ghost">
+                <html:div class="ghost__waves">
+                    <html:div class="ghost__wave" />
+                    <html:div class="ghost__wave" />
+                </html:div>
+                <html:div class="ghost__eyes">
+                    <html:div class="ghost__eyes_eye" />
+                    <html:div class="ghost__eyes_eye" />
+                </html:div>
+                <html:div class="ghost__mouth" />
+            </html:div>
+        </html:div>
+    </Page>
+</mvc:View>
