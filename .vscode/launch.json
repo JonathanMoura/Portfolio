@@ -1,558 +1,613 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Start projeto4",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "cwd": "${workspaceFolder}/Projeto4/projeto4",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--open",
-        "test/flpSandbox.html#projeto4projeto4-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "DEBUG": "--inspect",
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Projeto4/projeto4\"}"
-      }
-    },
-    {
-      "name": "Start projeto4 Mock",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Projeto4/projeto4",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-mock.yaml",
-        "--open",
-        "test/flpSandbox.html#projeto4projeto4-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Projeto4/projeto4\"}"
-      }
-    },
-    {
-      "name": "Start projeto4 Local",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Projeto4/projeto4",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-local.yaml",
-        "--open",
-        "test/flpSandbox.html#projeto4projeto4-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Projeto4/projeto4\"}"
-      }
-    },
-    {
-      "name": "Start customer",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "cwd": "${workspaceFolder}/Customer/customer",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--open",
-        "test/flpSandbox.html#customer-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "DEBUG": "--inspect",
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Customer/customer\"}"
-      }
-    },
-    {
-      "name": "Start customer Mock",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Customer/customer",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-mock.yaml",
-        "--open",
-        "test/flpSandbox.html#customer-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Customer/customer\"}"
-      }
-    },
-    {
-      "name": "Start customer Local",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Customer/customer",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-local.yaml",
-        "--open",
-        "test/flpSandbox.html#customer-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Customer/customer\"}"
-      }
-    },
-    {
-      "name": "Start sales",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "cwd": "${workspaceFolder}/Sales/sales",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--open",
-        "test/flpSandbox.html#salesreportsales-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "DEBUG": "--inspect",
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales/sales\"}"
-      }
-    },
-    {
-      "name": "Start sales Mock",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Sales/sales",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-mock.yaml",
-        "--open",
-        "test/flpSandbox.html#salesreportsales-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales/sales\"}"
-      }
-    },
-    {
-      "name": "Start sales Local",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Sales/sales",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-local.yaml",
-        "--open",
-        "test/flpSandbox.html#salesreportsales-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales/sales\"}"
-      }
-    },
-    {
-      "name": "Start pi_vendas_report",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "cwd": "${workspaceFolder}/ProjetoCDS/pi_vendas_report",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--open",
-        "test/flpSandbox.html#fiorinetpivendasreport-tile"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "DEBUG": "--inspect",
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ProjetoCDS/pi_vendas_report\"}"
-      }
-    },
-    {
-      "name": "Start pi_vendas_report Mock",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/ProjetoCDS/pi_vendas_report",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-mock.yaml",
-        "--open",
-        "test/flpSandbox.html#fiorinetpivendasreport-tile"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ProjetoCDS/pi_vendas_report\"}"
-      }
-    },
-    {
-      "name": "Start pi_vendas_report Local",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/ProjetoCDS/pi_vendas_report",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-local.yaml",
-        "--open",
-        "test/flpSandbox.html#fiorinetpivendasreport-tile"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ProjetoCDS/pi_vendas_report\"}"
-      }
-    },
-    {
-      "name": "Start sales_cds",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "cwd": "${workspaceFolder}/Sales CDS/sales_cds",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--open",
-        "test/flpSandbox.html#salescdssalescds-tile"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "DEBUG": "--inspect",
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales CDS/sales_cds\"}"
-      }
-    },
-    {
-      "name": "Start sales_cds Mock",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Sales CDS/sales_cds",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-mock.yaml",
-        "--open",
-        "test/flpSandbox.html#salescdssalescds-tile"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales CDS/sales_cds\"}"
-      }
-    },
-    {
-      "name": "Start sales_cds Local",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Sales CDS/sales_cds",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-local.yaml",
-        "--open",
-        "test/flpSandbox.html#salescdssalescds-tile"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales CDS/sales_cds\"}"
-      }
-    },
-    {
-      "name": "Start product_report",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "cwd": "${workspaceFolder}/Barcode/product_report",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--open",
-        "test/flpSandbox.html#productreport-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "DEBUG": "--inspect",
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Barcode/product_report\"}"
-      }
-    },
-    {
-      "name": "Start product_report Mock",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Barcode/product_report",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-mock.yaml",
-        "--open",
-        "test/flpSandbox.html#productreport-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Barcode/product_report\"}"
-      }
-    },
-    {
-      "name": "Start product_report Local",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Barcode/product_report",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-local.yaml",
-        "--open",
-        "test/flpSandbox.html#productreport-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Barcode/product_report\"}"
-      }
-    },
-    {
-      "name": "Start ghost",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "cwd": "${workspaceFolder}/Ghost/ghost",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--open",
-        "test/flpSandbox.html#ghost-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "DEBUG": "--inspect",
-        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Ghost/ghost\"}"
-      }
-    },
-    {
-      "name": "Start ghost Local",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/Ghost/ghost",
-      "runtimeExecutable": "npx",
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "args": [
-        "--config",
-        "./ui5-local.yaml",
-        "--open",
-        "test/flpSandbox.html#ghost-display"
-      ],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "port": 9229,
-      "env": {
-        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Ghost/ghost\"}"
-      }
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Start projeto4",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Projeto4/projeto4",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#projeto4projeto4-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Projeto4/projeto4\"}"
+            }
+        },
+        {
+            "name": "Start projeto4 Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Projeto4/projeto4",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#projeto4projeto4-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Projeto4/projeto4\"}"
+            }
+        },
+        {
+            "name": "Start projeto4 Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Projeto4/projeto4",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#projeto4projeto4-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Projeto4/projeto4\"}"
+            }
+        },
+        {
+            "name": "Start customer",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Customer/customer",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#customer-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Customer/customer\"}"
+            }
+        },
+        {
+            "name": "Start customer Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Customer/customer",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#customer-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Customer/customer\"}"
+            }
+        },
+        {
+            "name": "Start customer Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Customer/customer",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#customer-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Customer/customer\"}"
+            }
+        },
+        {
+            "name": "Start sales",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Sales/sales",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#salesreportsales-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales/sales\"}"
+            }
+        },
+        {
+            "name": "Start sales Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Sales/sales",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#salesreportsales-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales/sales\"}"
+            }
+        },
+        {
+            "name": "Start sales Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Sales/sales",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#salesreportsales-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales/sales\"}"
+            }
+        },
+        {
+            "name": "Start pi_vendas_report",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/ProjetoCDS/pi_vendas_report",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#fiorinetpivendasreport-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ProjetoCDS/pi_vendas_report\"}"
+            }
+        },
+        {
+            "name": "Start pi_vendas_report Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/ProjetoCDS/pi_vendas_report",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#fiorinetpivendasreport-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ProjetoCDS/pi_vendas_report\"}"
+            }
+        },
+        {
+            "name": "Start pi_vendas_report Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/ProjetoCDS/pi_vendas_report",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#fiorinetpivendasreport-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ProjetoCDS/pi_vendas_report\"}"
+            }
+        },
+        {
+            "name": "Start sales_cds",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Sales CDS/sales_cds",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#salescdssalescds-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales CDS/sales_cds\"}"
+            }
+        },
+        {
+            "name": "Start sales_cds Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Sales CDS/sales_cds",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#salescdssalescds-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales CDS/sales_cds\"}"
+            }
+        },
+        {
+            "name": "Start sales_cds Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Sales CDS/sales_cds",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#salescdssalescds-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Sales CDS/sales_cds\"}"
+            }
+        },
+        {
+            "name": "Start product_report",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Barcode/product_report",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#productreport-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Barcode/product_report\"}"
+            }
+        },
+        {
+            "name": "Start product_report Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Barcode/product_report",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#productreport-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Barcode/product_report\"}"
+            }
+        },
+        {
+            "name": "Start product_report Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Barcode/product_report",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#productreport-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Barcode/product_report\"}"
+            }
+        },
+        {
+            "name": "Start ghost",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Ghost/ghost",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#ghost-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Ghost/ghost\"}"
+            }
+        },
+        {
+            "name": "Start ghost Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Ghost/ghost",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#ghost-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Ghost/ghost\"}"
+            }
+        },
+        {
+            "name": "Start image_search",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/Search API/image_search",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#dev401imagesearchimagesearch-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Search API/image_search\"}"
+            }
+        },
+        {
+            "name": "Start image_search Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Search API/image_search",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#dev401imagesearchimagesearch-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Search API/image_search\"}"
+            }
+        }
+    ]
 }

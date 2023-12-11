@@ -1,0 +1,24 @@
+<mvc:View controllerName="dev401imagesearch.imagesearch.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+            <items>
+                <IconTabFilter text="Images">
+                    <SearchField search=".onSearchImage" width="100%" />
+                    <List headerText="List result" id="idList" items="{ImageModelAlias>/Images}">
+                        <CustomListItem>
+                            <HBox>
+                                <Image src="{ImageModelAlias>thumbnail/url}" width='5em'/>
+                                <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">  
+                                    <Link text="{ImageModelAlias>source/title}" href="{ImageModelAlias>thumbnail/url}" target="_blank" />
+                                    <Label text="{ImageModelAlias>source/name}" />
+                                </VBox>
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+    </Page>
+</mvc:View>
