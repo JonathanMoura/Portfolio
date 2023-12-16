@@ -1,0 +1,27 @@
+<mvc:View controllerName="customer.controller.Create"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core" displayBlock="true" height="100%" busyIndicatorDelay="0">
+    <Page>
+        <f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" title="Create client" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+            <f:content>
+                <Label text="Name" />
+                <Input value="" id="inputNome" />
+                <Label text="UF" />
+                <Input value="" id="inputUF" />
+                <Label text="Email" />
+                <Input value="" id="inputEmail" />
+                <Label text="Phone" />
+                <Input value="" id="inputTelefone" />
+            </f:content>
+        </f:SimpleForm>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button type="Accept" text="Save" press="onGravar"/>
+                <Button type="Reject" text="Cancell" press="onCancelar"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -20,6 +20,8 @@
             <Table
                 id="table"
                 width="auto"
+                mode="Delete"
+                delete="onClienteDelete"
                 items="{
                     path: '/ClienteSet',
                     sorter: {
@@ -30,7 +32,8 @@
                 noDataText="{worklistView>/tableNoDataText}"
                 busyIndicatorDelay="{worklistView>/tableBusyDelay}"
                 growing="true"
-                growingScrollToLoad="true"
+                growingScrollToLoad="false"
+                growingThreshold="20"
                 updateFinished=".onUpdateFinished"
             >
                 <headerToolbar>
@@ -41,10 +44,13 @@
                             level="H3"
                         />
                         <ToolbarSpacer />
+                        <Button text="Criar" press="onCriarCliente"></Button>                        
+                        <Button text="Ordenar" press="onSortItens"></Button>
+                        <Button text="Buscar" press="onPressBuscar"></Button>
                         <SearchField
                             id="searchField"
                             tooltip="{i18n>worklistSearchTooltip}"
-                            search=".onSearch"
+                            search=".onSearch2"
                         >
                             <layoutData>
                                 <OverflowToolbarLayoutData
@@ -63,6 +69,12 @@
                     <Column hAlign="End">
                         <Text text="Nome" />
                     </Column>
+                    <Column hAlign="End">
+                        <Text text="UF" />
+                    </Column>
+                    <Column hAlign="End">
+                        <Text text="Status" />
+                    </Column>
                 </columns>
 
                 <items>
@@ -73,18 +85,13 @@
                         <cells>
                             <ObjectIdentifier title="{ClienteID}" />
                             <ObjectIdentifier title="{Nome}" />
+                            <ObjectIdentifier title="{UF}" />
+                            <ObjectIdentifier title="{Status}" />
                             <ObjectNumber />
                         </cells>
                     </ColumnListItem>
                 </items>
             </Table>
         </semantic:content>
-
-        <semantic:sendEmailAction>
-            <semantic:SendEmailAction
-                id="shareEmail"
-                press=".onShareEmailPress"
-            />
-        </semantic:sendEmailAction>
     </semantic:SemanticPage>
 </mvc:View>

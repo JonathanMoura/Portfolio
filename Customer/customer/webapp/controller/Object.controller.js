@@ -2,8 +2,9 @@ sap.ui.define([
     "./BaseController",
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/routing/History",
-    "../model/formatter"
-], function (BaseController, JSONModel, History, formatter) {
+    "../model/formatter",
+    "sap/m/MessageToast"
+], function (BaseController, JSONModel, History, formatter, MessageToast) {
     "use strict";
 
     return BaseController.extend("customer.controller.Object", {
@@ -32,7 +33,55 @@ sap.ui.define([
         /* =========================================================== */
         /* event handlers                                              */
         /* =========================================================== */
+        onGravar: function(){
 
+            var oModel = this.getView().getModel();
+            var path = this.getView().getBindingContext().getPath();
+            var obj = {
+                Nome: this.byId("inputNome").getValue(),
+                Telefone: "44566545",
+                UF: "PR",
+                Email: "oi@tchau.fui",
+                Status: "1"
+            };
+
+            oModel.update(path, obj, {
+                success: function(oDados, resposta){
+
+                },
+                error: function(oError){
+
+                }
+            })
+        },
+
+        onGravar2: function(){
+
+            var oModel = this.getView().getModel();
+
+            oModel.submitChanges( {
+                success: function(oDados, resposta){
+                    MessageToast.show("Data saved")
+                },
+                error: function(oError){
+                    MessageToast.show("Failed")
+                }
+            })
+        },
+
+        onCancelar: function(oEvent){         
+            
+            var m = this.getView().getModel();
+
+            if(m.hasPendingChanges()){
+                MessageToast.show("Changes reset");
+            } else{
+                MessageToast.show("No changes to reset");
+                return
+            }
+
+            m.resetChanges();
+        },
 
         /**
          * Event handler  for navigating back.

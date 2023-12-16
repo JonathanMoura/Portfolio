@@ -2,29 +2,91 @@
     controllerName="customer.controller.Object"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns:semantic="sap.f.semantic">
-
+    xmlns:semantic="sap.f.semantic"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+>
     <semantic:SemanticPage
         id="page"
+        showFooter="true"
         headerPinnable="false"
         toggleHeaderOnTitleClick="false"
         busy="{objectView>/busy}"
-        busyIndicatorDelay="{objectView>/delay}">
-
+        busyIndicatorDelay="{objectView>/delay}"
+    >
         <semantic:titleHeading>
             <Title
                 text="{ClienteID}"
-                level="H2"/>
+                level="H2"
+            />
         </semantic:titleHeading>
 
-        <semantic:headerContent>
-            <ObjectNumber />
-        </semantic:headerContent>
+        <l:VerticalLayout class="sapUiContentPadding">
+            <f:SimpleForm
+                id="SimpleFormDisplay354"
+                editable="false"
+                layout="ResponsiveGridLayout"
+                title="Address"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <f:content>
+                    <Label text="Client ID" />
+                    <Text text="{ClienteID}" />
+                    <Label text="Name" />
+                    <Input value="{Nome}" id="inputNome"/>
+                    <Label text="UF" />
+                    <Input value="{UF}" id="inputUF" />
+                    <Label text="Status" />
+                    <Input value="{Status}" id="inputStatus"/>
+                </f:content>
+            </f:SimpleForm>
 
-        <semantic:sendEmailAction>
-            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
-        </semantic:sendEmailAction>
-
+            <List
+                headerText="Sales"
+                growing="true"
+                class="saapUiResponsiveMargin"
+                width="auto"
+                items="{
+			path: 'vendas'
+		}"
+            >
+                <items>
+                    <ObjectListItem
+                        title="{Descricaao}"
+                        number="{ValorLiquido}"
+                        numberState="{= ${ValorLiquido} > 500 ? 'Error' : 'Success'}"
+                    >
+                        <attributes>
+                            <ObjectAttribute text="{IDVenda}" />
+                            <ObjectAttribute text="{DataCriacao}" />
+                        </attributes>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </l:VerticalLayout>
+        <semantic:footerCustomActions>
+                <Button
+                    type="Accept"
+                    text="Gravar"
+                    press="onGravar2"
+                />
+                <Button
+                    type="Reject"
+                    text="Cancelar"
+                    press="onCancelar"
+                />
+            </semantic:footerCustomActions>
     </semantic:SemanticPage>
-
 </mvc:View>

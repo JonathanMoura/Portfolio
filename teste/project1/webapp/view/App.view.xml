@@ -1,0 +1,53 @@
+<mvc:View controllerName="project1.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+
+    <Page id="app"></Page>
+
+            <Panel headerText="Cadastro de: {pessoa>/nome} {pessoa>/sobrenome}" class="sapUiResponsiveMargin" width="auto">
+                <content>
+                    <Label text="Nome" class="sapUiSmallMargin" />
+                    <Input value="{pessoa>/nome}" valueLiveUpdate="true" width="200px" enabled="{pessoa>/habilitado}" />
+                    <Label text="Sobrenome" class="sapUiSmallMargin" />
+                    <Input value="{pessoa>/sobrenome}" valueLiveUpdate="false" width="200px" enabled="{pessoa>/habilitado}" />
+                    <CheckBox selected="{pessoa>/habilitado}" text="{Habilitado}" />
+                </content>
+            </Panel>
+
+            <Panel headerText="Detalhes Endereço" class="sapUiResponsiveMargin" width="auto">
+                <content>
+                    <l:VerticalLayout>
+                        <Label text="Endereço" class="sapUiSmallMargin" />
+                        <Text class="sapUiSmallMargin" text="{pessoa>/endereco/rua}" />
+                        <Text class="sapUiSmallMargin" text="{pessoa>/endereco/cidade}" />
+                        <Text class="sapUiSmallMargin" text="{pessoa>/endereco/cep}" />
+                        <Text class="sapUiSmallMargin" text="{pessoa>/endereco/pais}" />
+                    </l:VerticalLayout>
+                </content>
+            </Panel>
+
+            <List headerText="Lista de Funcionários" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{empregados>/Funcionarios}">
+                <StandardListItem title="{empregados>nome}" info="{= ${empregados>habilitado} === true? 'Habilitado' : 'Inativo'}" type="Active" press="onNavToClient"></StandardListItem>
+            </List>
+
+            <List headerText="Lista de Funcionários" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{empregados>/Funcionarios}">
+                <StandardListItem title="{empregados>nome}" info="{= ${empregados>habilitado} === true? 'Habilitado' : 'Inativo'}" type="Active" press="onFuncionarioSelected"></StandardListItem>
+            </List>
+
+            <Panel id="detalhePanel" headerText="Detalhes Funcionário" class="sapUiResponsiveMargin" width="auto">
+                <content>
+                    <l:VerticalLayout>
+                        <Label text="Nome" class="sapUiSmallMargin" />
+                        <Text class="sapUiSmallMargin" text="{empregados>nome}" />
+                        <Label text="Sobrenome" class="sapUiSmallMargin" />
+                        <Text class="sapUiSmallMargin" text="{empregados>sobrenome}" />
+                        <Label text="Habilitado" class="sapUiSmallMargin" />
+                        <Text class="sapUiSmallMargin" text="{empregados>habilitado}" />
+                    </l:VerticalLayout>
+                </content>
+            </Panel>
+
+    
+</mvc:View>

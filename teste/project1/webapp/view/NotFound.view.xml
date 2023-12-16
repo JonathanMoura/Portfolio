@@ -1,0 +1,21 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    height="100%">
+
+    <l:ResponsiveSplitter>
+		<l:PaneContainer orientation="Vertical">
+			<l:SplitPane>
+				<l:layoutData>
+					<l:SplitterLayoutData size="70%" />
+				</l:layoutData>
+				<IllustratedMessage enableVerticalResponsiveness="true" illustrationType="sapIllus-NoActivities">
+				</IllustratedMessage>
+			</l:SplitPane>
+			<l:SplitPane>
+				<VBox />
+			</l:SplitPane>
+		</l:PaneContainer>
+	</l:ResponsiveSplitter>
+</mvc:View>

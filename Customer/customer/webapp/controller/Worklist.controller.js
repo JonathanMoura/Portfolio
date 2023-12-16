@@ -37,6 +37,77 @@ sap.ui.define([
         },
 
         /* =========================================================== */
+        /* métodos customizaados                                       */
+        /* =========================================================== */
+        onSortItens: function(){
+            var campo = 'Nome';
+            var oSorter = new sap.ui.model.Sorter({
+                path: campo,
+                descending: false
+            });
+            var table = this.byId('table');
+            var itens = table.getBinding("items");
+            itens.sort(oSorter);
+        },
+
+        onPressBuscar: function(){
+
+            var oModel = this.getView().getModel();
+
+            oModel.read("/ClientSet('0000000001')",{
+
+                success: function(oDados, resposta){
+
+                }.bind(this),
+
+                error:function(oError){
+
+                }.bind(this)
+            })
+        },
+
+        onClienteRead:function(){
+
+            var table = this.byId("table");
+            var bindingInfo = table.getBindingInfo('items');
+            var aFilters = [];
+
+            table.bindAggregation('items',{
+
+                model: bindingInfo.model,
+                path: '/ClienteSet',
+                template: bindingInfoTemplate,
+                sorter: [
+                    new sap.ui.model.Sorter({
+                    path: "Nome",
+                    descending: false
+                })],
+                filter: aFilters
+            })
+        },
+
+        onClienteDelete: function(oEvent){
+
+            var oItem = oEvent.getParameter("listItem");
+            var sPath = oItem.getBindingContext().getPath();
+            var oModel = this.getView().getModel();
+
+            oModel.remove(sPath, {
+                success:function(){
+                    sap.m.MessageToast.show("Client removed");
+                }.bind(this),
+                error:function(e){
+                    console.error(e)
+                }.bind(this)
+            })
+        },
+
+        onCriarCliente: function(){
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo('create',{});
+        },
+
+        /* =========================================================== */
         /* event handlers                                              */
         /* =========================================================== */
 
@@ -98,6 +169,26 @@ sap.ui.define([
 
                 if (sQuery && sQuery.length > 0) {
                     aTableSearchState = [new Filter("ClienteID", FilterOperator.Contains, sQuery)];
+                }
+                this._applySearch(aTableSearchState);
+                this.onSortItens();
+            }
+
+        },
+
+        onSearch2 : function (oEvent) {
+            if (oEvent.getParameters().refreshButtonPressed) {
+                // Search field's 'refresh' button has been pressed.
+                // This is visible if you select any main list item.
+                // In this case no new search is triggered, we only
+                // refresh the list binding.
+                this.onRefresh();
+            } else {
+                var aTableSearchState = [];
+                var sQuery = oEvent.getParameter("query");
+
+                if (sQuery && sQuery.length > 0) {
+                    aTableSearchState = [new Filter("Nome", FilterOperator.Contains, sQuery)];
                 }
                 this._applySearch(aTableSearchState);
             }
