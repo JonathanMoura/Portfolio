@@ -40,9 +40,8 @@
                             level="H3"/>
                         <ToolbarSpacer />
 
-                        <Button text="Scanner NDC" icon="sap-icon://bar-code" press="onProductScan" visible="true" />
-                        <Button text="Scanner Quagga" icon="sap-icon://bar-code" press="onProductScan2" visible="false" />
-                        <!--<Button text="Scanner Quagga" icon="sap-icon://bar-code" press="onProductScan2" visible="{device>/barcodeScanEnabled}" />-->
+                        <!--<Button text="Scanner NDC" icon="sap-icon://bar-code" press="onProductScan" visible="true" />-->
+                        <Button text="Scanner" icon="sap-icon://bar-code" press="onProductScan2" visible="{device>/barcodeScanEnabled}" />
                         <SearchField
                             id="searchField"
                             tooltip="{i18n>worklistSearchTooltip}"
