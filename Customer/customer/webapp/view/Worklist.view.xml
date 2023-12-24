@@ -75,6 +75,9 @@
                     <Column hAlign="End">
                         <Text text="Status" />
                     </Column>
+                    <Column hAlign="End">
+                        <Text text="Change status" />
+                    </Column>
                 </columns>
 
                 <items>
@@ -87,7 +90,7 @@
                             <ObjectIdentifier title="{Nome}" />
                             <ObjectIdentifier title="{UF}" />
                             <ObjectIdentifier title="{Status}" />
-                            <ObjectNumber />
+                            <Button icon="sap-icon://synchronize" press="onAlterarStatus"/>
                         </cells>
                     </ColumnListItem>
                 </items>

@@ -195,6 +195,29 @@ sap.ui.define([
 
         },
 
+        onAlterarStatus: function(oEvent){
+
+            var oSource = oEvent.getSource();
+            var oParent = oSource.getParent();
+            var bc = oParent.getBindingContext();
+            var obj = bc.getObject();
+            var oModel = this.getView().getModel();
+            
+            oModel.callFunction("/AlterarStatus", {
+                method: "GET",
+                urlParameters: {
+                    ID: obj.ClienteID
+                },
+
+                success:function(dados, resposta){
+                    sap.m.MessageToast.show('Status changed')
+                }.bind(this),
+                error:function(){
+                    console.error(e);
+                }.bind(this)
+            })
+        },
+
         /**
          * Event handler for refresh event. Keeps filter, sort
          * and group settings and refreshes the list binding.
