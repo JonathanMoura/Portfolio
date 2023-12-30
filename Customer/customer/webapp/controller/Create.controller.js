@@ -17,8 +17,19 @@ sap.ui.define([
 	return BaseController.extend("customer.controller.Create", {
         formatter: formatter,
 
+        onInit : function () {
+
+            var oModel = this.getView().getModel();
+            oModel = new JSONModel();
+            this.setModel(oModel, "client");
+
+        },
+
         onNavBack: function(){
-            var oHistory = History.getInstance();
+
+            this.getRouter().navTo("worklist", {}, true);
+
+            /*var oHistory = History.getInstance();
             var sPreviousHash = oHistory.getPreviousHash();
         
             if(sPreviousHash !== undefined){
@@ -26,7 +37,7 @@ sap.ui.define([
             }else{
                 var oRouter = UIComponent.getRouterFor(this);
                 oRouter.navTo("worklist", {}, true);
-            }
+            }*/
         },
 
         onGravar: function(){

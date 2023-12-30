@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:semantic="sap.f.semantic"
->
+>   
     <semantic:SemanticPage
         id="page"
         headerPinnable="false"
@@ -45,8 +45,8 @@
                         />
                         <ToolbarSpacer />
                         <Button text="Criar" press="onCriarCliente"></Button>                        
-                        <Button text="Ordenar" press="onSortItens"></Button>
-                        <Button text="Buscar" press="onPressBuscar"></Button>
+                        <Button text="Ordenar" press="onSortItens" visible="false"></Button>
+                        <Button text="Buscar" press="onPressBuscar" visible="false"></Button>
                         <SearchField
                             id="searchField"
                             tooltip="{i18n>worklistSearchTooltip}"
@@ -64,10 +64,10 @@
 
                 <columns>
                     <Column>
-                        <Text text="Código" />
+                        <Text text="Code" />
                     </Column>
                     <Column hAlign="End">
-                        <Text text="Nome" />
+                        <Text text="Name" />
                     </Column>
                     <Column hAlign="End">
                         <Text text="UF" />

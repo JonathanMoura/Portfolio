@@ -3,7 +3,7 @@
     xmlns:f="sap.ui.layout.form"
     xmlns="sap.m"
     xmlns:c="sap.ui.core" displayBlock="true" height="100%" busyIndicatorDelay="0">
-    <Page>
+    <Page title="Client list" navButtonPress="onNavBack" showNavButton="true">
         <f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" title="Create client" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
             <f:content>
                 <Label text="Name" />
@@ -20,7 +20,7 @@
             <OverflowToolbar>
                 <ToolbarSpacer/>
                 <Button type="Accept" text="Save" press="onGravar"/>
-                <Button type="Reject" text="Cancell" press="onCancelar"/>
+                <Button type="Reject" text="Cancell" press="onCancelar" visible="false"/>
             </OverflowToolbar>
         </footer>
     </Page>
